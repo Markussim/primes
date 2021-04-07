@@ -24,8 +24,21 @@ namespace primes
             if (args.Length > 0 && long.TryParse(args[0], out limit) == true) { }
             else
             {
-                Console.WriteLine("Please eneter limit");
-                limit = long.Parse(Console.ReadLine());
+                while (true)
+                {
+                    try
+                    {
+                        Console.WriteLine("Please eneter limit");
+                        limit = long.Parse(Console.ReadLine());
+                        break;
+                    }
+                    catch (System.Exception)
+                    {
+                        Console.WriteLine("Please enter a valid number");
+                    }
+
+                }
+
             }
 
             totstopWatch.Start();
