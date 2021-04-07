@@ -21,7 +21,7 @@ namespace primes
 
             long limit;
 
-            if (args[0] != null && long.TryParse(args[0], out limit) == true) { }
+            if (args.Length > 0 && long.TryParse(args[0], out limit) == true) { }
             else
             {
                 Console.WriteLine("Please eneter limit");
