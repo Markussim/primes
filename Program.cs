@@ -120,10 +120,7 @@ namespace primes
 
             foreach (long item in primes)
             {
-                if (possibalePrime % item == 0)
-                {
-                    return false;
-                }
+                if (possibalePrime % item == 0) return false;
             }
 
             if (possibalePrime < 2) return false;
